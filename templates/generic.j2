@@ -1,0 +1,14 @@
+###################################################
+#                                                 #
+#      FILE UNDER ANSIBLE CONFIG MANAGEMENT       #
+#                                                 #
+#               keep hands away                   #
+#                                                 #
+#     ansible-fail2ban/templates/generic.j2       #
+#                                                 #
+###################################################
+
+[{{item.key}}]
+{% for k,v in item.value.iteritems() %}
+{{ k }} = {{ v }}
+{% endfor %}
