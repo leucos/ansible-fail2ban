@@ -12,4 +12,12 @@
   with_dict: "{{ f2b_jails }}"
   notify: Restart fail2ban
 
+- name: Adds sudoers config for telegraf user
+  template:
+    src: fail2ban.sudoers.j2
+    dest: /etc/sudoers.d/20_fail2ban
+    mode: 0440
+    owner: root
+    group: root
+  tags: ["sudo"]
 
