@@ -1,3 +1,5 @@
+**DEPRECATED: MOVED TO https://github.com/devops-works/ansible-fail2ban**
+
 fail2ban Ansible role
 =====================
 
